@@ -1,23 +1,42 @@
 <div align="center">
 
-<img src="https://i.imgur.com/mvQUQUr.png" alt="VOID-NUKE preview" width="780"/>
-
-<br><br>
-
-**v1.0.0** &nbsp;—&nbsp; by  **1s0e**
+> **⚖️ Educational use only** — see [DISCLAIMER.md](DISCLAIMER.md).  
+> Use only on **Discord servers you own** or with **explicit written permission**.
 
 <br>
 
-[![Discord](https://img.shields.io/badge/Discord-W6z9SQgvqc-5865F2?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/W6z9SQgvqc)
-[![GitHub](https://img.shields.io/badge/GitHub-void4real-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/dawa4real)
-![Python](https://img.shields.io/badge/Python-3.10+-CC0000?style=for-the-badge&logo=python&logoColor=white)
-![Platform](https://img.shields.io/badge/Windows-10%2F11-CC0000?style=for-the-badge&logo=windows&logoColor=white)
+# VOID-NUKE
+
+### Discord server management CLI · Rich TUI · 39 modular commands
+
+**v1.0.0** · by **1s0e**
 
 <br>
 
-> *39 commands · full red TUI · single file · auto pub injection*
+[![Discord](https://img.shields.io/badge/Discord-discord.gg/v0id-5865F2?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/v0id)
+[![GitHub](https://img.shields.io/badge/GitHub-v0id4real-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/v0id4real)
+[![Python](https://img.shields.io/badge/Python-3.10+-CC0000?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
+[![Platform](https://img.shields.io/badge/Windows-10%2F11-CC0000?style=for-the-badge&logo=windows&logoColor=white)
+
+<br>
+
+> *39 commands · red terminal UI · single-file bot · server admin toolkit*
+
+<br>
+
+**Part of the VOID ecosystem →** [**Void-Tools v2.0**](https://github.com/V0id-v2/Void-Tools-v2.0)
 
 </div>
+
+<br>
+
+---
+
+## 🖥️ Overview
+
+**VOID-NUKE** is a Python CLI for **Discord server administration** — channel & role management, member tools, server info, and moderation helpers through a Rich terminal interface.
+
+**Authorized use only:** your own servers, test environments, or servers where you have admin rights and permission to run automation.
 
 <br>
 
@@ -28,10 +47,10 @@
 ```
 1 — python_installer.bat     checks Python
 2 — setup.bat                installs dependencies
-3 — start.bat                launches VOID-NUKE
+3 — start.bat                launches the CLI
 ```
 
-> **The bot must be in the target server with Administrator permissions.**
+> Your bot must be invited to the server with the permissions required for the actions you run.
 
 <br>
 
@@ -39,21 +58,15 @@
 
 ## ⚠️ Required — Bot Intents
 
-Before running, you **must** enable these intents in the [Discord Developer Portal](https://discord.com/developers/applications) or the bot will crash on startup.
-
-**Steps:**
-1. Go to [discord.com/developers/applications](https://discord.com/developers/applications)
-2. Select your bot → **Bot** tab
-3. Scroll to **Privileged Gateway Intents**
-4. Enable the following:
+Enable these in the [Discord Developer Portal](https://discord.com/developers/applications) before running:
 
 | Intent | Required |
 |--------|:--------:|
 | **Server Members Intent** | ✅ |
 | **Message Content Intent** | ✅ |
-| Presence Intent | ❌ not needed |
+| Presence Intent | ❌ |
 
-> Without these, commands like Ban All, Kick All, Mute All, Rename Members, etc. **will not work.**
+**Steps:** Applications → your bot → **Bot** → **Privileged Gateway Intents** → enable the two above.
 
 <br>
 
@@ -72,25 +85,24 @@ Before running, you **must** enable these intents in the [Discord Developer Port
 
 ---
 
-## 📟 Page 1 &nbsp;—&nbsp; Destroy / Members / Server
+## 📟 Command categories
 
-| # | Command | # | Command | # | Command | # | Command |
-|:-:|---------|:-:|---------|:-:|---------|:-:|---------|
-| `01` | 💣 Nuke | `02` | ⚔️ Auto Raid | `03` | 🔨 Ban All | `04` | 👢 Kick All |
-| `05` | 🔇 Mute All | `06` | 🔓 Unban All | `07` | 🗑️ Del Channels | `08` | 😶 Del Emojis |
-| `09` | 🧹 Del Stickers | `10` | ➕ Create Channels | `11` | 🎭 Create Roles | `12` | 📂 Create Cats |
-| `13` | ✏️ Rename Channels | `14` | ✏️ Rename Roles | `15` | 🌐 Edit Server | `16` | 👤 Rename Members |
-| `17` | 🔡 Fix Nicks | `18` | 👑 Get Admin | `19` | 🎭 Impersonate | `20` | 👻 Ghost Ping |
+| Page | Focus |
+|------|--------|
+| **1** | Server structure — channels, roles, categories, server settings, member nicknames |
+| **2** | Moderation & utilities — messaging, webhooks, VC tools, server info, clone/backup helpers |
 
-## 📟 Page 2 &nbsp;—&nbsp; Members / VC / Spam / Tools
+39 numbered commands available in-app. Full list is shown inside the terminal UI.
 
-| # | Command | # | Command | # | Command | # | Command |
-|:-:|---------|:-:|---------|:-:|---------|:-:|---------|
-| `21` | ✂️ Strip Roles | `22` | 📨 Message All | `23` | 📬 DM Spam User | `24` | 🪝 Webhook Spam |
-| `25` | 📊 Server Info | `26` | 💾 Clone Server | `27` | 📡 Webhook Logs | `28` | 🔒 Lockdown |
-| `29` | 🔊 Sourdine VC | `30` | 🚪 Kick VC All | `31` | ↗️ Move All VC | `32` | 🔗 Invite Spam |
-| `33` | 💬 Spam | `34` | 🧵 Thread Spam | `35` | 😀 Reaction Spam | `36` | 🎙️ Voice Spam |
-| `37` | 👁️ Spoiler Spam | `38` | 📊 Poll Spam | `39` | 📅 Event Spam | `40` | 🚪 Quit |
+<br>
+
+---
+
+## 📜 License & disclaimer
+
+- **MIT License** — see [LICENSE](LICENSE)
+- **Terms of use** — see [DISCLAIMER.md](DISCLAIMER.md)
+- Respect [Discord Terms of Service](https://discord.com/terms) at all times
 
 <br>
 
@@ -98,8 +110,8 @@ Before running, you **must** enable these intents in the [Discord Developer Port
 
 <div align="center">
 
-**VOID-NUKE v1.0.0** &nbsp;—&nbsp; by 1s0e
+**VOID-NUKE v1.0.0** · by 1s0e
 
-[discord.gg/W6z9SQgvqc](https://discord.gg/W6z9SQgvqc) &nbsp;·&nbsp; [github.com/void4real](https://github.com/dawa4real)
+[discord.gg/v0id](https://discord.gg/v0id) · [github.com/v0id4real](https://github.com/v0id4real)
 
 </div>
