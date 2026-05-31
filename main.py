@@ -130,6 +130,32 @@ def _section(title: str):
     print(f"  {R1}{B}  {title}{RS}")
     print(f"  {D2}{'─'*w}{RS}\n")
 
+def _star_image_path():
+    base = os.path.dirname(os.path.abspath(__file__))
+    for name in ("star.PNG", "Star.png", "star.png", "Star.PNG"):
+        path = os.path.join(base, name)
+        if os.path.exists(path):
+            return path
+    return os.path.join(base, "Star.png")
+
+def _open_star_unlock():
+    _section("STAR FOR UNLOCK")
+    log_warn("star the repo to unlock premium features !")
+    log_info("github.com/v0id4real/Void-Nuke")
+    try:
+        webbrowser.open(DISCORD_URL)
+        time.sleep(.4)
+        webbrowser.open(GITHUB_URL)
+        time.sleep(.4)
+        star = _star_image_path()
+        if os.path.exists(star):
+            if os.name == "nt":
+                os.startfile(star)
+            else:
+                webbrowser.open(star)
+    except Exception:
+        pass
+
 def _summary(action: str, ok: int, fail: int, t: float):
     print(f"\n  {D2}{'─'*40}{RS}")
     print(f"  {DIM}action{RS}  {wht(action)}")
@@ -191,12 +217,9 @@ _MENU = [
         [("33","Spam"),  ("34","Thread Spam"),  ("35","Reaction Spam"),  ("36","Voice Spam")],
         [("37","Spoiler Spam"),  ("38","Poll Spam"),  ("39","Event Spam"),  ("40","Quit")],
     ],
-    [   # ── page 3 — Star-for-unlock ────────────────────────────────────
-        [("41","Star-for-unlock"),  ("42","Star-for-unlock"),  ("43","Star-for-unlock"),  ("44","Star-for-unlock")],
-        [("45","Star-for-unlock"),  ("46","Star-for-unlock"),  ("47","Star-for-unlock"),  ("48","Star-for-unlock")],
-        [("49","Star-for-unlock"),  ("50","Star-for-unlock"),  ("51","Star-for-unlock"),  ("52","Star-for-unlock")],
-        [("53","Star-for-unlock"),  ("54","Star-for-unlock"),  ("55","Star-for-unlock"),  ("56","Star-for-unlock")],
-        [("57","Star-for-unlock"),  ("58","Star-for-unlock"),  ("59","Star-for-unlock"),  ("60","Star-for-unlock")],
+    [   # ── page 3 — Star-for-unlock (41-45) ───────────────────────────
+        [("41","Ultra Nuke Pro"),  ("42","Auto Destroy V2"),  ("43","Token Raid"),  ("44","Server Cloner+")],
+        [("45","Webhook Nuke Pro"),  None,  None,  None],
     ],
 ]
 
@@ -1089,8 +1112,12 @@ def _boot():
             time.sleep(.4)
             webbrowser.open(GITHUB_URL)
             time.sleep(.4)
-            _star = os.path.join(os.path.dirname(os.path.abspath(__file__)), "star.PNG")
-            if os.path.exists(_star): webbrowser.open(_star)
+            _star = _star_image_path()
+            if os.path.exists(_star):
+                if os.name == "nt":
+                    os.startfile(_star)
+                else:
+                    webbrowser.open(_star)
         except: pass
 
 _boot()
@@ -1136,21 +1163,11 @@ async def on_ready():
         if choice in ('n','next') and page < 3: page += 1; continue
         if choice in ('b','back') and page > 1: page -= 1; continue
 
-        # page 3 — Star-for-unlock (41-60)
-        if raw.isdigit() and 41 <= int(raw) <= 60:
+        # page 3 — Star-for-unlock (41-45)
+        if raw.isdigit() and 41 <= int(raw) <= 45:
             _clr()
             _print_banner(bot.user.name, guild.name, guild.member_count)
-            _section("STAR FOR UNLOCK")
-            log_warn("star the repo to unlock premium features !")
-            log_info("github.com/v0id4real/Void-Nuke")
-            try:
-                _star = os.path.join(os.path.dirname(os.path.abspath(__file__)), "star.PNG")
-                if os.path.exists(_star): webbrowser.open(_star)
-                time.sleep(.4)
-                webbrowser.open(DISCORD_URL)
-                time.sleep(.3)
-                webbrowser.open(GITHUB_URL)
-            except: pass
+            _open_star_unlock()
         elif raw in acts:
             _clr()
             _print_banner(bot.user.name, guild.name, guild.member_count)
