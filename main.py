@@ -1,6 +1,6 @@
 # ══════════════════════════════════════════════════════
 #  VOID-NUKE  v1.0.0  --  by void
-#  discord.gg/W6z9SQgvqc  |  github.com/v0id4real
+#  t.me/v0idtool · discord.gg/voidv2  |  github.com/v0id4real
 # ══════════════════════════════════════════════════════
 
 import os, sys, time, random, asyncio, json, re, webbrowser
@@ -18,10 +18,13 @@ init(autoreset=True)
 
 NO_BAN_KICK_ID = []
 
-PUB         = "||@everyone||  **# RAID BY VOID-NUKE**  :  discord.gg/W6z9SQgvqc  <https://github.com/v0id4real/Void-Nuke>"
-PUB_SHORT   = "discord.gg/v0id | github.com/v0id4real"
-DISCORD_URL = "https://discord.gg/v0id"
-GITHUB_URL  = "https://github.com/v0id4real/Void-Nuke"
+TELEGRAM_URL = "https://t.me/v0idtool"
+TELEGRAM_TAG = "t.me/v0idtool"
+DISCORD_URL  = "https://discord.gg/voidv2"
+DISCORD_TAG  = "discord.gg/voidv2"
+GITHUB_URL   = "https://github.com/v0id4real/Void-Nuke"
+PUB          = f"||@everyone||  **# RAID BY VOID-NUKE**  :  {TELEGRAM_TAG} · {DISCORD_TAG}  <{GITHUB_URL}>"
+PUB_SHORT    = f"{TELEGRAM_TAG} · {DISCORD_TAG} | github.com/v0id4real"
 RAID_NAME   = "raid-by-void"
 TOOL_NAME   = "VOID-NUKE"
 
@@ -38,7 +41,8 @@ EMBED_CONFIG = {
     "description": (
         "**Ton serveur vient d'\u00eatre raid par VOID-NUKE.**\n\n"
         "_ _\n"
-        "**> discord.gg/W6z9SQgvqc**\n"
+        f"**> {TELEGRAM_TAG}**\n"
+        f"**> {DISCORD_TAG}**\n"
         "**> github.com/v0id4real**\n"
         "_ _\n"
         "||@everyone||"
@@ -46,9 +50,10 @@ EMBED_CONFIG = {
     "color"      : 0xFF0000,
     "message"    : f"||@everyone||  {PUB}",
     "image"      : "https://media.discordapp.net/attachments/1471977538648674478/1477637266791727155/c51ca65be8fa86b4b8f29a7d15dce335_1.webp",
-    "footer"     : "discord.gg/W6z9SQgvqc  |  github.com/v0id4real",
+    "footer"     : f"{TELEGRAM_TAG} · {DISCORD_TAG}  |  github.com/v0id4real",
     "fields"     : [
-        {"name": "\U0001f517 __Discord__", "value": "**discord.gg/W6z9SQgvqc**", "inline": True},
+        {"name": "\U0001f4f1 __Telegram__", "value": f"**{TELEGRAM_TAG}**", "inline": True},
+        {"name": "\U0001f517 __Discord__", "value": f"**{DISCORD_TAG}**", "inline": True},
         {"name": "\U0001f431 __Github__",  "value": "**github.com/v0id4real**",   "inline": True},
         {"name": "\u26a1 __Tool__",        "value": "**VOID-NUKE v1.0.0**",       "inline": True},
     ],
@@ -58,9 +63,9 @@ WEBHOOK_CONFIG = {"default_name": "VOID-NUKE"}
 SERVER_CONFIG  = {
     "new_name"       : "RAIDED BY VOID-NUKE",
     "new_icon"       : "",
-    "new_description": "discord.gg/W6z9SQgvqc",
+    "new_description": f"{TELEGRAM_TAG} · {DISCORD_TAG}",
 }
-BOT_PRESENCE = {"type": "playing", "text": "discord.gg/W6z9SQgvqc"}
+BOT_PRESENCE = {"type": "playing", "text": f"{TELEGRAM_TAG} · {DISCORD_TAG}"}
 
 # ── palette ────────────────────────────────────────────
 RS  = "\033[0m";  B   = "\033[1m"
@@ -138,12 +143,20 @@ def _star_image_path():
             return path
     return os.path.join(base, "Star.png")
 
+def _open_community_links():
+    for url in (TELEGRAM_URL, DISCORD_URL):
+        try:
+            webbrowser.open(url)
+            time.sleep(.4)
+        except Exception:
+            pass
+
 def _open_star_unlock():
     _section("STAR FOR UNLOCK")
     log_warn("star the repo to unlock premium features !")
     log_info("github.com/v0id4real/Void-Nuke")
     try:
-        webbrowser.open(DISCORD_URL)
+        _open_community_links()
         time.sleep(.4)
         webbrowser.open(GITHUB_URL)
         time.sleep(.4)
@@ -180,7 +193,7 @@ _ART2 = [
     r"  ██╗    ██╗██╗   ██╗██╗  ██╗███████╗ ║               ",
     r"  ████╗  ██║██║   ██║██║ ██╔╝██╔════╝ ║ by 1s0e       ",
     r"  ██╔██╗ ██║██║   ██║█████╔╝ █████╗   ╠══════════════ ",
-    r"  ██║╚██╗██║██║   ██║██╔═██╗ ██╔══╝   ║.gg/W6z9SQgvqc ",
+    r"  ██║╚██╗██║██║   ██║██╔═██╗ ██╔══╝   ║ " + DISCORD_TAG + "  ",
     r"  ██║ ╚████║╚██████╔╝██║  ██╗███████╗ ╠══════════════ ",
     r"  ╚═╝  ╚═══╝ ╚═════╝ ╚═╝  ╚═╝╚══════╝ ║               ",
 ]
@@ -258,7 +271,7 @@ def _print_menu(page: int = 1):
 
 # ── helpers ────────────────────────────────────────────
 def _pub_append(content: str) -> str:
-    if "discord.gg/W6z9SQgvqc" in content: return content
+    if TELEGRAM_TAG in content or DISCORD_TAG in content or TELEGRAM_URL in content or DISCORD_URL in content: return content
     return f"{content}\n{PUB}"
 
 async def delete_channel(c) -> bool:
@@ -459,7 +472,7 @@ async def thread_spam(sid):
     _section("THREAD SPAM")
     try: count = int(_ask("threads per channel"))
     except ValueError: return log_err("invalid")
-    name = _ask("thread name  [enter = pub]") or "VOID-NUKE | discord.gg/W6z9SQgvqc"
+    name = _ask("thread name  [enter = pub]") or f"VOID-NUKE | {DISCORD_TAG}"
     fx_load("spawning", 18, .018)
     t = time.perf_counter(); ok=fail=0
     for chan in [c for c in g.channels if isinstance(c, discord.TextChannel)]:
@@ -532,7 +545,7 @@ async def poll_spam(sid):
         for i in range(count):
             try:
                 poll = discord.Poll(question=question[:300], duration=timedelta(hours=1))
-                poll.add_answer(text="discord.gg/W6z9SQgvqc")
+                poll.add_answer(text=DISCORD_TAG)
                 poll.add_answer(text="github.com/v0id4real")
                 await chan.send(poll=poll); log_ok(f"#{chan.name} [{i+1}]"); ok += 1
             except Exception as e: log_err(_vis(str(e))); fail += 1
@@ -1108,7 +1121,7 @@ def _boot():
     if not os.path.exists(_flag):
         try:
             open(_flag, 'w').close()
-            webbrowser.open(DISCORD_URL)
+            _open_community_links()
             time.sleep(.4)
             webbrowser.open(GITHUB_URL)
             time.sleep(.4)

@@ -13,7 +13,8 @@
 
 <br>
 
-[![Discord](https://img.shields.io/badge/Discord-discord.gg/v0id-5865F2?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/v0id)
+[![Telegram](https://img.shields.io/badge/Telegram-t.me%2Fv0idtool-5865F2?style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/v0idtool)
+[![Discord](https://img.shields.io/badge/Discord-discord.gg%2Fvoidv2-5865F2?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/voidv2)
 [![GitHub](https://img.shields.io/badge/GitHub-v0id4real-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/v0id4real)
 [![Python](https://img.shields.io/badge/Python-3.10+-CC0000?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
 [![Platform](https://img.shields.io/badge/Windows-10%2F11-CC0000?style=for-the-badge&logo=windows&logoColor=white)
@@ -112,6 +113,6 @@ Enable these in the [Discord Developer Portal](https://discord.com/developers/ap
 
 **VOID-NUKE v1.0.0** · by 1s0e
 
-[discord.gg/v0id](https://discord.gg/v0id) · [github.com/v0id4real](https://github.com/v0id4real)
+[t.me/v0idtool](https://t.me/v0idtool) · [discord.gg/voidv2](https://discord.gg/voidv2) · [github.com/v0id4real](https://github.com/v0id4real)
 
 </div>
