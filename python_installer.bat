@@ -1,10 +1,10 @@
 @echo off
 setlocal enabledelayedexpansion
-title Void-Tools Setup
+title FUFA-Tools Setup
 color 0c
 
 echo.
-echo  ^<^<^< VOID-TOOLS SETUP ^>^>^>
+echo  ^<^<^< FUFA-TOOLS SETUP ^>^>^>
 echo  ================================
 echo.
 
