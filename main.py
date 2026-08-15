@@ -37,7 +37,7 @@ AUTO_RAID_CONFIG = {
 
 EMBED_CONFIG = {
     "title"      : "\U0001f480  __FUFA-NUKE__",
-    "description": (
+    "description": 
         "**Ton serveur vient d'\u00eatre raid par FUFA-NUKE.**\n\n"
         "_ _\n"
         f"**> {TELEGRAM_TAG}**\n"
