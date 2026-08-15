@@ -5,7 +5,7 @@
 
 <br>
 
-# VOID-NUKE
+# FUFA-NUKE
 
 ### Discord server management CLI · Rich TUI · 39 modular commands
 
@@ -25,7 +25,6 @@
 
 <br>
 
-**Part of the VOID ecosystem →** [**Void-Tools v2.0**](https://github.com/V0id-v2/Void-Tools-v2.0)
 
 </div>
 
@@ -35,7 +34,7 @@
 
 ## 🖥️ Overview
 
-**VOID-NUKE** is a Python CLI for **Discord server administration** — channel & role management, member tools, server info, and moderation helpers through a Rich terminal interface.
+**FUFA-NUKE** is a Python CLI for **Discord server administration** — channel & role management, member tools, server info, and moderation helpers through a Rich terminal interface.
 
 **Authorized use only:** your own servers, test environments, or servers where you have admin rights and permission to run automation.
 
