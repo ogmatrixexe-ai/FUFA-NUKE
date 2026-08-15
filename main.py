@@ -19,7 +19,7 @@ init(autoreset=True)
 NO_BAN_KICK_ID = []
 
 TELEGRAM_URL = "https://t.me/v0idtool"
-TELEGRAM_TAG = "t.me/v0idtool"
+TELEGRAM_TAG = ""
 DISCORD_URL  = "https://discord.gg/xn4vNQNqjh"
 DISCORD_TAG  = "discord.gg/xn4vNQNqjh"
 sed -i '25c\PUB = f"FUFA-NUKE | {TELEGRAM_TAG} | {DISCORD_TAG}"' main.py
