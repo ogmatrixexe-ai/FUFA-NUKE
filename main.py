@@ -36,9 +36,9 @@ AUTO_RAID_CONFIG = {
 }
 
 EMBED_CONFIG = {
-    "title"      : "\U0001f480  __VOID-NUKE__",
+    "title"      : "\U0001f480  __FUFA-NUKE__",
     "description": (
-        "**Ton serveur vient d'\u00eatre raid par VOID-NUKE.**\n\n"
+        "**Ton serveur vient d'\u00eatre raid par FUFA-NUKE.**\n\n"
         "_ _\n"
         f"**> {TELEGRAM_TAG}**\n"
         f"**> {DISCORD_TAG}**\n"
@@ -58,7 +58,7 @@ EMBED_CONFIG = {
     ],
 }
 
-WEBHOOK_CONFIG = {"default_name": "VOID-NUKE"}
+WEBHOOK_CONFIG = {"default_name": "FUFA-NUKE"}
 SERVER_CONFIG  = {
     "new_name"       : "RAIDED BY FUFA-NUKE",
     "new_icon"       : "",
