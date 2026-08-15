@@ -23,7 +23,7 @@ TELEGRAM_TAG = "t.me/v0idtool"
 DISCORD_URL  = "https://discord.gg/xn4vNQNqjh"
 DISCORD_TAG  = "discord.gg/xn4vNQNqjh"
 PUB          = f"||@everyone||  **# RAID BY VOID-NUKE**  :  {TELEGRAM_TAG} · {DISCORD_TAG}  <{GITHUB_URL}>"
-PUB_SHORT    = f"{TELEGRAM_TAG} · {DISCORD_TAG} | 
+PUB_SHORT    = f"{TELEGRAM_TAG} · {DISCORD_TAG} 
 RAID_NAME   = "raid-by-fufa"
 TOOL_NAME   = "FUFA-NUKE"
 
