@@ -24,7 +24,7 @@ DISCORD_URL  = "https://discord.gg/xn4vNQNqjh"
 DISCORD_TAG  = "discord.gg/xn4vNQNqjh"
 sed -i '25c\PUB = f"FUFA-NUKE | {TELEGRAM_TAG} | {DISCORD_TAG}"' main.py
 PUB_SHORT    = f"{TELEGRAM_TAG} · {DISCORD_TAG} 
-RAID_NAME   = "raid-by-fufa"
+RAID_NAME   = "fuxed-by-rc"
 TOOL_NAME   = "FUFA-NUKE"
 
 AUTO_RAID_CONFIG = {
